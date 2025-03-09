@@ -2,4 +2,14 @@
 ### AppControllerGetHello
 
 # @name AppControllerGetHello
-GET {{{{baseUrl}}}}/home/hello
+GET {{baseUrl}}/home/hello
+
+# ConceitosManualControllerHome
+
+# @name ConceitosManualControllerHome
+GET {{baseUrl}}/conceitos-manual
+
+# ConceitosAutomaticoControllerHome
+
+# @name ConceitosAutomaticoControllerHome
+GET {{baseUrl}}/conceitos-automatico
