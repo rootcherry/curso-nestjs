@@ -1,9 +1,11 @@
 @baseUrl = http://localhost:3000
 
+# RECADOS
+
 ### RecadosControllerFindAll
 # @name RecadosControllerFindAll
-GET {{baseUrl}}/
+GET {{baseUrl}}/recados
 
 ### RecadosControllerFindOne
 # @name RecadosControllerFindOne
-GET {{baseUrl}}/:id
+GET {{baseUrl}}/recados/:id

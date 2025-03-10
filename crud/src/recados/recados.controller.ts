@@ -8,7 +8,7 @@ export class RecadosController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return `Esta rota retorna um #${id} recado`;
+  findOne(): string {
+    return `Esta rota retorna um recado`;
   }
 }
