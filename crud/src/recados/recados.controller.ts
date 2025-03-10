@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('recados')
 export class RecadosController {
@@ -14,7 +14,8 @@ export class RecadosController {
   }
 
   @Post()
-  create(): string {
-    return `Esta rota cria um recado.`;
+  create(@Body() body: any) {
+    // console.log(body);
+    return body;
   }
 }
