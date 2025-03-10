@@ -2,15 +2,15 @@
 
 # RECADOS
 
-### RecadosControllerFindAll
+### Lista todos os recados
 # @name RecadosControllerFindAll
 GET {{baseUrl}}/recados/
 
-### RecadosControllerFindOne
+### Lista apenas um recado
 # @name RecadosControllerFindOne
 GET {{baseUrl}}/recados/1/
 
-### RecadosControllerCreate
+### Cria um recado
 # @name RecadosControllerCreate
 POST {{baseUrl}}/recados/
 Content-Type: application/json
@@ -18,4 +18,14 @@ Content-Type: application/json
 {
   "recado": "Este é o recado que estou enviando.",
   "nova chace": "outro valor"
+}
+
+### Atualiza um recado
+# @name RecadosControllerUpdate
+PATCH  {{baseUrl}}/recados/1/
+Content-Type: application/json
+
+{
+  "recado": "Este é o recado que estou enviando.",
+  "atualizar": true
 }
