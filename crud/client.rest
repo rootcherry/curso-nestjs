@@ -8,4 +8,4 @@ GET {{baseUrl}}/recados
 
 ### RecadosControllerFindOne
 # @name RecadosControllerFindOne
-GET {{baseUrl}}/recados/:id
+GET {{baseUrl}}/recados/1/
