@@ -4,8 +4,12 @@
 
 ### RecadosControllerFindAll
 # @name RecadosControllerFindAll
-GET {{baseUrl}}/recados
+GET {{baseUrl}}/recados/
 
 ### RecadosControllerFindOne
 # @name RecadosControllerFindOne
 GET {{baseUrl}}/recados/1/
+
+### RecadosControllerCreate
+# @name RecadosControllerCreate
+POST {{baseUrl}}/recados/
