@@ -5,6 +5,8 @@
 ### Lista todos os recados
 # @name RecadosControllerFindAll
 GET {{baseUrl}}/recados/
+# ?limit=10
+# &offset=10
 
 ### Lista apenas um recado
 # @name RecadosControllerFindOne
