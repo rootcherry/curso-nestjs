@@ -15,7 +15,48 @@ export class RecadosService {
     },
   ];
 
-  hello() {
-    return 'Hello, World!';
+  findAll() {
+    return this.recados;
+  }
+
+  findOne(id: string) {
+    return this.recados.find((item) => item.id === +id);
+  }
+
+  create(body: any) {
+    this.lastId++;
+    const id = this.lastId;
+    const novoRecado = {
+      id,
+      ...body,
+    };
+    this.recados.push(novoRecado);
+
+    return novoRecado;
+  }
+
+  update(id: string, body: any) {
+    const recadoExistenteIndex = this.recados.findIndex(
+      (item) => item.id === +id,
+    );
+
+    if (recadoExistenteIndex >= 0) {
+      const recadoExistente = this.recados[recadoExistenteIndex];
+
+      this.recados[recadoExistenteIndex] = {
+        ...recadoExistente,
+        ...body,
+      };
+    }
+  }
+
+  remove(id: string) {
+    const recadoExistenteIndex = this.recados.findIndex(
+      (item) => item.id === +id,
+    );
+
+    if (recadoExistenteIndex >= 0) {
+      this.recados.splice(recadoExistenteIndex, 1);
+    }
   }
 }

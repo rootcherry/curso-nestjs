@@ -18,20 +18,26 @@ POST {{baseUrl}}/recados/
 Content-Type: application/json
 
 {
-  "recado": "Este é o recado que estou enviando.",
-  "nova chace": "outro valor"
+  "texto": "3 Novo recado",
+  "de": "Maria",
+  "para": "Ana",
+  "lido": false,
+  "data": "2025-03-08T18:24:44.621Z"
 }
 
 ### Atualiza um recado
 # @name RecadosControllerUpdate
-PATCH  {{baseUrl}}/recados/1/
+PATCH  {{baseUrl}}/recados/2/
 Content-Type: application/json
 
 {
-  "recado": "Este é o recado que estou enviando.",
-  "atualizar": true
-}
+  "texto": "Atualizado o recado",
+  "de": "Maria",
+  "para": "Ana",
+  "lido": false,
+  "data": "2025-03-08T18:24:44.621Z"
+} 
 
 ### Apaga um recado
 # @name RecadosControllerRemove
-DELETE   {{baseUrl}}/recados/1/
+DELETE   {{baseUrl}}/recados/2/
