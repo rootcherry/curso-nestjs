@@ -10,7 +10,7 @@ GET {{baseUrl}}/recados/
 
 ### Lista apenas um recado
 # @name RecadosControllerFindOne
-GET {{baseUrl}}/recados/1/
+GET {{baseUrl}}/recados/2/
 
 ### Cria um recado
 # @name RecadosControllerCreate
@@ -18,7 +18,7 @@ POST {{baseUrl}}/recados/
 Content-Type: application/json
 
 {
-  "texto": "3 Novo recado",
+  "texto": "4 NOVO Recado",
   "de": "Maria",
   "para": "Ana",
   "lido": false,
@@ -31,7 +31,7 @@ PATCH  {{baseUrl}}/recados/2/
 Content-Type: application/json
 
 {
-  "texto": "Atualizado o recado",
+  "texto": "ATUALIZAR Recado",
   "de": "Maria",
   "para": "Ana",
   "lido": false,
