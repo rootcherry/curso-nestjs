@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Recado } from './entities/recado.entity';
 
 @Injectable()
@@ -20,7 +20,11 @@ export class RecadosService {
   }
 
   findOne(id: string) {
-    return this.recados.find((item) => item.id === +id);
+    const recado = this.recados.find((item) => item.id === +id);
+
+    if (recado) return recado;
+
+    throw new HttpException('Esse erro é do servidor.', HttpStatus.NOT_FOUND);
   }
 
   create(body: any) {
