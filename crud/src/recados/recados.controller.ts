@@ -11,6 +11,11 @@ import {
   Query,
 } from '@nestjs/common';
 import { RecadosService } from './recados.service';
+import { CreateRecadoDto } from './dto/create-recado.dto';
+import { UpdateRecadoDto } from './dto/update-recado.dto';
+
+// DTO - Data Transfer Object -> Objeto de Transferência de Dados
+// DTO - Objeto simples -> Nestjs -> Validar dados/ Transformar dados
 
 @Controller('recados')
 export class RecadosController {
@@ -30,14 +35,14 @@ export class RecadosController {
   }
 
   @Post()
-  create(@Body() body: any) {
+  create(@Body() createRecadoDto: CreateRecadoDto) {
     // console.log(body);
-    return this.recadosService.create(body);
+    return this.recadosService.create(createRecadoDto);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body: any) {
-    return this.recadosService.update(id, body);
+  update(@Param('id') id: string, @Body() updateRecadoDto: UpdateRecadoDto) {
+    return this.recadosService.update(id, updateRecadoDto);
   }
 
   @Delete(':id')
