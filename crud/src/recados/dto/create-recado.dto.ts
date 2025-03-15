@@ -15,7 +15,7 @@ export class CreateRecadoDto {
 
   @IsString()
   @IsNotEmpty()
-  @MinLength(5)
-  @MaxLength(255)
+  @MinLength(2)
+  @MaxLength(50)
   readonly para: string;
 }
