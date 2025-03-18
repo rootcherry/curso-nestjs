@@ -1,8 +1,8 @@
 export class Recado {
   id: number;
   texto: string;
-  de: string;
-  para: string;
+  de: string; // Pessoa
+  para: string; // Pessoa
   lido: boolean;
   data: Date;
 }
